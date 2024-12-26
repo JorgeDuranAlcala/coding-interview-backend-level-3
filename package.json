@@ -4,7 +4,9 @@
   "description": "Coding Interview Backend Level 3",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest e2e"
+    "build": "tsc",
+    "start": "cross-env NODE_ENV=development node dist/src/index.js",
+    "test": "cross-env NODE_ENV=test jest e2e"
   },
   "author": "El Dorado Dev Team",
   "license": "ISC",
@@ -17,6 +19,11 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@hapi/hapi": "^21.3.10"
+    "@hapi/hapi": "^21.3.10",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
   }
 }
